@@ -4,9 +4,8 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>3f5dc9c7-9ad3-4c49-b21d-8790ddc173f6</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>LogtextArchived.py</StartupFile>
-    <SearchPath>
-    </SearchPath>
+    <StartupFile>main.py</StartupFile>
+    <SearchPath>ConfigParse;DataAnalysis;DataModel;pymysql;sensorsanalytics;Log</SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>LogtextArchived</Name>
@@ -21,7 +20,96 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="CleanUp.py" />
+    <Compile Include="ConfigParse\Config.py" />
+    <Compile Include="const.py" />
+    <Compile Include="DataAnalysis\DataAnalysis_Battle.py" />
+    <Compile Include="DataAnalysis\DataAnalysis_CharBaseAction.py" />
+    <Compile Include="DataAnalysis\DataAnalysis_Consume.py" />
+    <Compile Include="DataAnalysis\DataAnalysis_CreateChar.py" />
+    <Compile Include="DataAnalysis\DataAnalysis_Obtain.py" />
+    <Compile Include="DataFactory.py" />
+    <Compile Include="DBManager.py" />
+    <Compile Include="Func.py" />
+    <Compile Include="Log\Log.py" />
+    <Compile Include="Log\Logger.py" />
     <Compile Include="LogtextArchived.py" />
+    <Compile Include="main.py" />
+    <Compile Include="Mark.py" />
+    <Compile Include="DataModel\Model_Battle.py" />
+    <Compile Include="DataModel\Model_Comment.py" />
+    <Compile Include="DataModel\Model_Consume.py" />
+    <Compile Include="DataModel\Model_CreateChar.py" />
+    <Compile Include="DataModel\Model_Entermap.py" />
+    <Compile Include="DataModel\Model_ListenChat.py" />
+    <Compile Include="DataModel\Model_Login.py" />
+    <Compile Include="DataModel\Model_Logout.py" />
+    <Compile Include="DataModel\Model_Obtain.py" />
+    <Compile Include="DataModel\Model_Online.py" />
+    <Compile Include="DataModel\Model_Quitmap.py" />
+    <Compile Include="DataModel\Model_Recharge.py" />
+    <Compile Include="DataModel\Model_Task.py" />
+    <Compile Include="DataModel\Model_Tipoff.py" />
+    <Compile Include="Monitor.py" />
+    <Compile Include="MySql.py" />
+    <Compile Include="pymysql\charset.py" />
+    <Compile Include="pymysql\connections.py" />
+    <Compile Include="pymysql\constants\CLIENT.py" />
+    <Compile Include="pymysql\constants\COMMAND.py" />
+    <Compile Include="pymysql\constants\ER.py" />
+    <Compile Include="pymysql\constants\FIELD_TYPE.py" />
+    <Compile Include="pymysql\constants\FLAG.py" />
+    <Compile Include="pymysql\constants\SERVER_STATUS.py" />
+    <Compile Include="pymysql\constants\__init__.py" />
+    <Compile Include="pymysql\converters.py" />
+    <Compile Include="pymysql\cursors.py" />
+    <Compile Include="pymysql\err.py" />
+    <Compile Include="pymysql\tests\base.py" />
+    <Compile Include="pymysql\tests\test_basic.py" />
+    <Compile Include="pymysql\tests\test_connection.py" />
+    <Compile Include="pymysql\tests\test_cursor.py" />
+    <Compile Include="pymysql\tests\test_DictCursor.py" />
+    <Compile Include="pymysql\tests\test_example.py" />
+    <Compile Include="pymysql\tests\test_issues.py" />
+    <Compile Include="pymysql\tests\test_load_local.py" />
+    <Compile Include="pymysql\tests\test_nextset.py" />
+    <Compile Include="pymysql\tests\test_SSCursor.py" />
+    <Compile Include="pymysql\tests\thirdparty\test_MySQLdb\capabilities.py" />
+    <Compile Include="pymysql\tests\thirdparty\test_MySQLdb\dbapi20.py" />
+    <Compile Include="pymysql\tests\thirdparty\test_MySQLdb\test_MySQLdb_capabilities.py" />
+    <Compile Include="pymysql\tests\thirdparty\test_MySQLdb\test_MySQLdb_dbapi20.py" />
+    <Compile Include="pymysql\tests\thirdparty\test_MySQLdb\test_MySQLdb_nonstandard.py" />
+    <Compile Include="pymysql\tests\thirdparty\test_MySQLdb\__init__.py" />
+    <Compile Include="pymysql\tests\thirdparty\__init__.py" />
+    <Compile Include="pymysql\tests\__init__.py" />
+    <Compile Include="pymysql\times.py" />
+    <Compile Include="pymysql\util.py" />
+    <Compile Include="pymysql\_compat.py" />
+    <Compile Include="pymysql\_socketio.py" />
+    <Compile Include="pymysql\__init__.py" />
+    <Compile Include="SensorsanalyticsDdManger.py" />
+    <Compile Include="sensorsanalytics\sdk.py" />
+    <Compile Include="sensorsanalytics\test_sdk.py" />
+    <Compile Include="sensorsanalytics\__init__.py" />
+    <Compile Include="setup - Copy.py" />
+    <Compile Include="setup.py" />
+    <Compile Include="Utils.py" />
+    <Compile Include="__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="D:\GitHub\LogtextArchived\LogtextArchived\pymysql\" />
+    <Folder Include="D:\GitHub\LogtextArchived\LogtextArchived\sensorsanalytics\" />
+    <Folder Include="DataModel\" />
+    <Folder Include="DataAnalysis\" />
+    <Folder Include="ConfigParse\" />
+    <Folder Include="Log\" />
+    <Folder Include="pymysql\constants\" />
+    <Folder Include="pymysql\tests\" />
+    <Folder Include="pymysql\tests\thirdparty\" />
+    <Folder Include="pymysql\tests\thirdparty\test_MySQLdb\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="config.ini" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
